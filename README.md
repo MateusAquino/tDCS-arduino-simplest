@@ -27,6 +27,7 @@ O Arduino calcula a corrente padrão (pode ser alterado) que passará pelo seu c
 5) Para acessar a lista de comandos, digite `?` e pressione <kbd>Enter</kbd>
 
 Obs:
+
 Caso o Estado seja:
    - *`-1`* -> Cérebro não identificado (corrente aberta)
    - *`+0`* -> Ajustando voltagem
@@ -35,6 +36,7 @@ Caso o Estado seja:
 ## Serial Plotter
 
 ![Serial Plotter](/imgs/Plotter.png?raw=true "Serial Plotter")
+
 Dados:
    - 1ª (azul) - corrente máxima (target_mA)
    - 2ª (vermelho) - corrente mínima (0 mA)
