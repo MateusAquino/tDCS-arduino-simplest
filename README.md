@@ -26,6 +26,12 @@ O Arduino calcula a corrente padrão (pode ser alterado) que passará pelo seu c
 4) Caso queira ver em forma de gráficos, altere no código fonte: **`plotter = true`** e entre no modo Serial Plotter do Arduino.
 5) Para acessar a lista de comandos, digite `?` e pressione <kbd>Enter</kbd>
 
+Obs:
+Caso o Estado seja:
+   - *`-1`* -> Cérebro não identificado (corrente aberta)
+   - *`+0`* -> Ajustando voltagem
+   - *`+1`* -> Tudo certo, tDCS funcionando
+
 ## Serial Plotter
 
 ![Serial Plotter](/imgs/Plotter.png?raw=true "Serial Plotter")
