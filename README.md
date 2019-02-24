@@ -24,6 +24,7 @@ O Arduino calcula a corrente padrão (pode ser alterado) que passará pelo seu c
 3) Lembre-se de alterar o boud rate do Serial para: **115200** (para executar comandos, troque o *No Line Ending* para *Carriage Return*).
 3) Para melhor acompanhamento e segurança, utilize a ferramenta PuTTY, e defina no código fonte: **`putty = true`**.
 4) Caso queira ver em forma de gráficos, altere no código fonte: **`plotter = true`** e entre no modo Serial Plotter do Arduino.
+5) Para acessar a lista de comandos, digite `?` e pressione <kbd>Enter</kbd>
 
 ## Serial Plotter
 
