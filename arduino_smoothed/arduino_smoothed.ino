@@ -148,8 +148,8 @@ void help(){
   Serial.println("'max_time <minutos>' - atualiza o tempo máximo (em minutos)");
   Serial.println("'target_mA <mA>' - atualiza o target (mA)");
   Serial.println("'epsilon_mA <mA>' - atualiza o epsilon_mA (mA)");
-  Serial.println("'R <new Ohm>' - atualiza a resistência do hardware (Ohm)");
-  Serial.println("'putty <true/false>' - muda a formatação de saída para o PuTTY");
+  Serial.println("'R <Ohm>' - atualiza a resistência do hardware (Ohm)");
+  Serial.println("'putty <true/false>' - muda a formatação de saída pro PuTTY");
   Serial.println("'stop' - para a estimulação");
   Serial.println("'restart' - inicia/reinicia a estimulação & o timer");
   Serial.println("'continue' - continua a estimulação");
