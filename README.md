@@ -55,7 +55,7 @@ Recomendações de definições:
 Paypal:
 https://www.paypal.me/ekolkhoz
 
-bitcoin: 
+Bitcoin: 
 1PBiNy33ZqRyAA8HcSgq6GS4f6PH5R9zUu
 
 ![btc](/imgs/c1av9wf.png?raw=true "btc")
