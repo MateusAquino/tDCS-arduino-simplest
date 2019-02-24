@@ -1,6 +1,7 @@
-# tDCS_arduino_simplest
+# tDCS_arduino_simplest (pt-BR) v2.0m
+## tDCS_arduino_simples
 
-to make this tDCS you need only arduino, resistor, capasitor and crocodile connectors
+Para fazer este tDCS você precisará apenas de um arduino, resistor, capacitor e alguns cabos
 
 ![Assembled](/imgs/wtf.jpg?raw "Assembled")
 
