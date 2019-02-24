@@ -7,11 +7,11 @@ Para fazer este tDCS você precisará apenas de um arduino, resistor, capacitor 
 
 ### Componentes:
 1) Arduino
-   - D13 pin as PWM output (pode ser alterado)
-   - A0 pin as analog input (for current feedback)
-   - GND pin just for GND.
-2) R - Resistor (Eu usei de 470 Ohms, mas provavelmente entre 300-1000 Ohms funciona: **você precisará alterar no código fonte**)
-3) C - capacitor (220 uF). Serve para estabilizar os pulsos do PWM.
+   - Pino D13 como saída PWM (**pode** ser alterado).
+   - Pino A0 como entrada analógica (para feedback de corrente).
+   - Pino GND apenas para GND.
+2) R - Resistor (Uso de 470 Ω, mas provavelmente entre 300-1000 Ω funciona, **você precisará alterar no código fonte**)
+3) C - capacitor (220 μF). Serve para estabilizar os pulsos do PWM.
 4) Eletrodos de Esponja (Use água salina para molhá-lo).
 
 ## Como funciona
