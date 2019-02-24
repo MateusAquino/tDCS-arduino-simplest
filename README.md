@@ -5,55 +5,57 @@ Para fazer este tDCS você precisará apenas de um arduino, resistor, capacitor 
 
 ![Assembled](/imgs/wtf.jpg?raw "Assembled")
 
-
-## Schematic
-
-![Schematic](/imgs/connections.jpg?raw=true "Schematic")
-
-1) Arduino (I have the chineese clone of Nano) 
-   - D9 pin as PWM output
+### Componentes:
+1) Arduino
+   - D13 pin as PWM output (pode ser alterado)
    - A0 pin as analog input (for current feedback)
    - GND pin just for GND.
-2) R - resistor for current measurement (I have 470 Ohm, I think 300-1000 Ohm would be ok, you need to write correct value to arduino code)
-3) C - capasitor (I have electrolytic one, with 220 uF, electrolytic must be connected with "-" pin to ground).  Capasitor smoothes PWM pulsations.
-4) Sponge electrodes (use saline water to wet it) attached to your head.
+2) R - Resistor (Eu usei de 470 Ohms, mas provavelmente entre 300-1000 Ohms funciona: **você precisará alterar no código fonte**)
+3) C - capacitor (220 uF). Serve para estabilizar os pulsos do PWM.
+4) Eletrodos de Esponja (Use água salina para molhá-lo).
 
-## How it works
-Arduino is trying to set target value of current (up to 1 mA) passed through your brain by changing output voltage. You can set target_mA value by serial CLI.
+## Como funciona
+O Arduino calcula a corrente padrão (pode ser alterado) que passará pelo seu cérebro apenas por mudar a voltagem de saída. Você também pode alterar o valor do target_mA pelo serial CLI (Console).
 
-## If I want to try this
-0) You must read what is tDCS first. Yes, it's not approved by FDA and can be harmful. 
-1) Assemble schematic.
-2) Download firmware and set params in //HARDWARE PARAMS section
-3) Upload firmware to your arduino. Open Tools > Serial Plotter and look to fancy lines. 
-   - First (blue?) - voltage on PWM (0-5 Volts)
-   - Second (red?) - current passed through your brain (mA)
-   - Third (green?) - same as the Second one just smoothed (mA)
-   - Fourth (orange?) - debounced status (-1 - electrodes are not connected, 0 - trying to set target current, 1 - current has target value)
+## Caso queira testar (Leia atentamente)
+0) Você deve ler mais sobre tDCS primeiro. Não é aprovado pelo FDA e pode ser prejudicial. 
+1) Monte o circuito (abaixo).
+2) Instale o código no seu arduino e altere as configurações e parametros na área de `//HARDWARE PARAMS` e `//CONFIGURABLE PARAMS`.
+3) Lembre-se de alterar o boud rate do Serial para: **115200** (para executar comandos, troque o *No Line Ending* para *Carriage Return*).
+3) Para melhor acompanhamento e segurança, utilize a ferramenta PuTTY, e defina no código fonte: **`putty = true`**.
+4) Caso queira ver em forma de gráficos, altere no código fonte: **`plotter = true`** e entre no modo Serial Plotter do Arduino.
 
-## Tweakings
+## Serial Plotter
 
-![Serial Plotter](/imgs/pulsations.png?raw=true "Serial Plotter")
+![Serial Plotter](/imgs/Plotter.png?raw=true "Serial Plotter")
+Dados:
+   - 1ª (azul) - corrente máxima (target_mA)
+   - 2ª (vermelho) - corrente mínima (0 mA)
+   - 3ª (verde) - corrente passando pelo seu cérebro (smoothered_mA)   
 
-Here you can see that output voltage is small, and pulsations of current are significant. You can try to add some resistors (100 - 700 Ohms or variable resistor/potentiometer) in series with cathode or anode to make resistance of whole circuit bigger and have more stable parameters.
+## PuTTY
 
-![Additional resistance](/imgs/additionalRa.jpg?raw=true "Additional resistance")
+![PuTTY](/imgs/putty.png?raw=true "Serial Plotter")
 
-With this resistors output voltage with same target_ma would be bigger, and pulsations are smaller.
+Recomendações de definições:
 
-![With additional 500 Ohms](/imgs/Screenshot%20from%202017-06-26%2017:50:52.png?raw=true "With additional 500 Ohms")
+* Window
+    * 61 Colunas e 20 Linhas
+    * *Display scrollbar* desativado
+* Window > Appearance
+    * Fonte: Lucida Console, 28px
 
-## UI
-For comfortable and safe using it needs UI (python pyside, or something like this).
-It has Serial CLI 115200 (you can check it out with putty, or Arduino IDE > Tools > Serial Monitor (some ugly artifacts when trying to clear screen and needs to set "Carriage return"))
+## Circuito
 
-![CLI](/imgs/cli_menu.png?raw=true "CLI")
+![Schematic](/imgs/Sketch_bb.png?raw=true "Schematic")
 
-## Donations
-paypal
 
+## Doações para o [autor](https://github.com/e-kolkhoz/tDCS_arduino_simplest) original
+
+Paypal:
 https://www.paypal.me/ekolkhoz
 
-bitcoin:1PBiNy33ZqRyAA8HcSgq6GS4f6PH5R9zUu
+bitcoin: 
+1PBiNy33ZqRyAA8HcSgq6GS4f6PH5R9zUu
 
 ![btc](/imgs/c1av9wf.png?raw=true "btc")
